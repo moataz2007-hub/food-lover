@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+  font-family: "Quicksand", sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.contener{
+    margin: 0 auto;
+    padding:0 15px;
+}
+.spechl-heading{
+    font-size:60px ;
+    font-weight: 600;
+    text-align: center;
+}
+.spechl-prgra{
+    margin-top: -5px;
+text-align: center;
+  margin-bottom: 40px;
+}
+/* Small */
+@media (min-width: 768px) {
+  .contener {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .contener {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .contener {
+    width: 1170px;
+  }
+}
+/* بداية الهيد */
+header{
+      position: absolute;
+    margin-top: 20px;
+    z-index: 5;
+    width: 100%;
+}
+header .contener{
+display: flex;
+justify-content: space-between;
+align-items: center;
+ position: relative;
+}
+.contener a img{
+width: 120px;
+}
+.contener nav{
+   flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.contener nav ul{ display: flex;}
+.contener nav ul a{
+     font-weight: 600;
+    color: white;
+    padding: 20px;
+    display: block;
+    font-size: 30px;
+    transition: 0.3s;
+}
+.contener nav ul a:hover{
+    border-bottom: solid orange 2px;
+}
+.contener nav div{
+    font-size: 60px;
+    font-weight: 900;
+    color: white; display: none;
+}
+@media (max-width:992px){
+    .contener nav div{
+        display:block;
+    }
+    .contener nav ul{
+    flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        display: none;
+        background-color: darkgrey;
+    }
+    .contener nav div:hover+ul{
+        display: flex;
+    }
+    .contener nav ul a{
+        padding: 2px 10px;
+        border-bottom: black 2px solid;
+    }
+}
+/* نهاية الهيد */
+/* بداية الاندنج */
+.landing{
+   background-image: url("img/home_bg.jpeg");
+    height: 100vh;
+    background-position: center center;
+    position: relative;
+}
+.landing .contener{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.landing .text{
+text-align: center;
+}
+@media (max-width:992px){
+    .landing .text{
+        transform: translateY(110px);
+    }
+}
+.landing h1{
+    font-weight: 600px;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+.landing .contener h1 span{
+    color:orange;
+}
+.landing p{
+    color: white;
+margin-bottom: 40px;
+font-size: 30px;
+}
+.landing button{
+    background-color: transparent;
+    color: white;
+    border-color:white ;
+    border-radius: 20%;
+    font-size: 30px;
+    font-weight: 600;
+padding: 15px;
+cursor: pointer;
+}
+
+/* نهاية الاندنج */
+/* بداية احب الاكل */
+.i-love{
+    margin: 100px 0;
+}
+.i-love .i-love-sec{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:992px){
+    .i-love .i-love-sec{
+        flex-direction: column;
+    }
+}
+.i-love .i-love-sec div{
+    margin-right: 40px;
+}
+.i-love .i-love-sec div button{
+        padding: 13px;
+    border-radius: 18%;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    margin:30px 0;
+}
+/* نهاية حب الاكل */
+/* بداية قسم العروض */
+.offer{
+    background-image: url("img/offer-background.jpg");
+    background-repeat: round;
+    margin-top: 100px;
+    padding-bottom: 20px;
+}
+.offer .contener .spechl-heading{
+    color: yellow;
+}
+.offer .contener .spechl-prgra{
+    color: white;
+}
+.offer .contener .grid{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+}
+.grid img{
+margin-bottom: 20px;
+width: 140px;
+}
+.grid p{
+    margin-bottom: 10px;
+    color: white;
+}
+.grid span{
+color: white;
+    margin-right: 10px;
+}
+/* نهاية قسم العروض */
+/* بداية قسم المنيو */
+.menu{
+   margin-top: 100px;
+}
+.menu .menu-item{
+     display: flex;
+    justify-content: space-between;
+}
+/* اليمين واليسار */
+.menu-right,
+.menu-left{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* كل عنصر */
+.menu .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* الصورة */
+.menu .item img{
+    width: 80px;
+    margin-right: 20px;
+}
+
+/* النص */
+.menu .item .text{
+    flex: 1;
+}
+
+.menu .item h3{
+    margin-bottom: 5px;
+}
+
+.menu .item p{
+    margin-bottom: 10px;
+    color: gray;
+}
+.menu .item hr{
+    width: 80%;
+}
+.btnnn{ 
+    margin:60px 0;
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #ff8c00, #ff5e00);
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  
+  }
+
+  .btn:hover {
+    background: linear-gradient(135deg, #ff5e00, #ff8c00);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  .btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+/* نهاية قسم المنيو */
+ .flex{
+    width: 100%;
+    background-color: gold;
+}
+.flex .contener div{
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+@media (max-width:992px){
+    .flex .contener div{
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+    }
+
+}
+.flex .contener div div{
+    color: white;
+    display: flex ;
+    flex-direction: column;
+    font-size: 30px;
+    align-items: center;
+}
+.flex .contener div div img{
+    width: 134px;
+}
+/* بداية القلري */
+.galary{
+    background-image: url("img/offer-background.jpg");
+    background-repeat:repeat-y;
+     background-position-y: bottom;
+}
+.galary .contener .gridd{
+    margin-top: 60px;
+    display: flex;
+   justify-content: space-evenly;
+
+} 
+.gridd div{
+    width: 250px;
+}
+@media (max-width:992px){
+
+.galary .contener .gridd{
+   flex-direction: column;
+   align-items: center;
+}
+}
+
+.galary img{
+    width: 250px;
+    height: 206px;
+    border-radius: 40px;
+    margin-bottom: 18px;
+    transition: 0.4s;
+}
+.galary img:hover{
+  transform: translateY(-13px);
+}
+/* نهاية القلري */
+/* بداية التواصل */
+#contact {
+  background: #f4f2ed;
+  padding: 5rem 0;
+}
+#contact .contener{
+    max-width: 900px;
+}
+#contact .contener .contact-content{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width:992px){
+    #contact .contener .contact-content{
+            flex-direction: column;
+    }
+}
+
+#contact .contact-info {
+  width: 50%;
+}
+
+#contact .contact-info div {
+  margin: 30px 0;
+  line-height: 1.7;
+}
+
+#contact .contact-info h3 {
+  font-size: 28px;
+  color: #383848;
+  margin-bottom: 10px;
+}
+
+#contact .contact-info p {
+  color: #9a9a9a;
+}
+
+#contact .contact-info p i {
+  color: #e4b95b;
+  margin-right: 5px;
+}
+@media (max-width:992px){
+    #contact .contact-info p i{
+        margin-right: 0;
+
+    }
+    #contact .contact-info p{
+        margin-bottom: 10px;
+    }
+}
+#contact .contact-info a i {
+  color: #fff;
+  background: #383848;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+
+#contact .contact-info a i:hover {
+    transform: translateY(-10px);
+  background-color: #e4b95b;
+  color: #383848;
+}
+
+form {
+  width: 50%;
+}
+
+form input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 20px 15px;
+  margin: 20px 0;
+  border: none;
+  background-color: #e3e2dd;
+}
+
+form input:focus,
+textarea:focus {
+  outline: none;
+}
+
+form button {
+  color: #fff;
+}
+/* نهاية التواصل */
+footer{
+    background-color: orange;
+}
+footer .text{
+ text-align: center;
+   color: white;
+   font-size: 14px;
+}
